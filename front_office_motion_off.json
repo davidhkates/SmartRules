@@ -31,9 +31,7 @@
 					{
 						"command": {
 							"devices": [
-								"1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56",
-								"7b1ede44-2579-4e9a-b4e7-8b4848382443",
-								"d21b29b0-5fc7-4642-a22d-db8d2d1204d6"
+								"1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56"
 							],
 							"commands": [
 								{
