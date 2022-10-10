@@ -1,6 +1,6 @@
 {
-    "name": "If motion between 6PM and 9PM, turn on light",
-    "timeZoneId": "America/New_York",
+    "name": "If motion between 7:30AM and 6PM weekdays, turn on office light and outlet",
+    "timeZoneId": "America/Denver",
     "actions": [
         {
             "if": {
@@ -10,7 +10,7 @@
                             "left": {
                                 "device": {
                                     "devices": [
-                                        "4858b604-10e3-47ea-8432-d6418157bb13"
+                                        "1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56"
                                     ],
                                     "component": "main",
                                     "capability": "motionSensor",
@@ -38,10 +38,10 @@
                                         "Thu",
                                         "Fri"
                                     ],
-                                    "reference": "Midnight",
+                                    "reference": "Noon",
                                     "offset": {
                                         "value": {
-                                            "integer": -360
+                                            "integer": -270
                                         },
                                         "unit": "Minute"
                                     }
@@ -56,10 +56,10 @@
                                         "Thu",
                                         "Fri"
                                     ],
-                                    "reference": "Midnight",
+                                    "reference": "Noon",
                                     "offset": {
                                         "value": {
-                                            "integer": -180
+                                            "integer": 360
                                         },
                                         "unit": "Minute"
                                     }
@@ -72,7 +72,8 @@
                     {
                         "command": {
                             "devices": [
-                                "f42e284d-fa01-4a09-a55e-adbdda632ac2"
+                                "1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56",
+								"7b1ede44-2579-4e9a-b4e7-8b4848382443"
                             ],
                             "commands": [
                                 {
