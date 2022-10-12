@@ -1,0 +1,12 @@
+{
+    "s3_buckets": {
+        "washu": {
+            "name": "upn-washu-omop",
+            "region": "us-west-2"
+        },
+        "athena": {
+            "name": "upn-athena-ohdsi",
+            "region": "us-west-2"
+        }
+    }
+}

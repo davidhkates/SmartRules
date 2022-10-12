@@ -1,0 +1,204 @@
+div.dataTables_wrapper {
+    margin-bottom: 3em;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    white-space: nowrap;
+}
+
+.table-heading {
+    /* border-collapse: collapse;
+    margin: 25px 0; */
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-heading thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table-heading tbody tr:hover
+{
+    background-color: yellow;
+}
+
+
+h1 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-weight: bold;
+    /* font-family: sans-serif;
+    font-size: 0.9em; */
+}
+
+ol,ul {
+	list-style: none;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.5em 0;
+}
+
+#mainMenu {
+	margin: 10px;
+	width: 900px;
+	font-family: sans-serif;
+}
+
+#mainMenu li {
+	display: block;
+	width: 120px;
+	float: left;
+	margin-left: 2px;
+	border: 1px solid #000;
+}
+
+#mainMenu a {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	background-color: #fff;
+	color: #336791;
+}
+
+#mainMenu a:hover,
+#mainMenu a:active {
+	background-color: #336791;
+	color:#fff;
+}
+
+.tableFixHead {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	overflow: auto;
+	/* overflow-y: auto;
+	height: 106px; */
+	height: 300px;
+}
+
+.tableFixHead thead th {
+	position: sticky;
+	top: 0;
+}
+
+.tableFixHead table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tableFixHead thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tableFixHead tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tableFixHead tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.tableFixHead tbody tr:hover
+{
+   background-color: yellow;
+}
+
+th, td {
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+}
+
+th {
+    font-family: Arial, serif;
+    /* background: #009879;
+    background-color: #009879; */
+}
+
+.layout-table table, tr, td {
+	border:none;
+}	
+
+/*
+.vertical-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.vertical-menu li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+    font-size: 0.9em;
+    font-family: sans-serif;
+}
+
+.vertical-menu li a.active {
+  background-color: #009879;
+  color: white;
+}
+
+.vertical-menu li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+*/
+
+.button-workflow {
+    background-color: #D3D3D3;
+    border-radius: 8px;
+    border-style: solid;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    /* user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; */
+}
+
+.button-workflow:hover,
+.button-workflow:focus {
+    background-color: #009879;
+    color: #FFFFFF;
+}
+
+.button-automation:hover,
+.button-automation:focus {
+    background-color: #FD9827;
+    color: #FFFFFF;
+}
