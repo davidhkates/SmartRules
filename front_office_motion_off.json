@@ -1,21 +1,21 @@
 {
 	"name": "If motion stops for 15 minutes, turn off office light, outlet and heater",
-	"timeZoneId": "America/Denver",
 	"actions": [
 		{
 			"if": {
 				"remains": {
 					"duration": {
 						"value": {
-							"integer": 60
+							"integer": 15
 						},
-						"unit": "Second"
+						"unit": "Minute"
 					},
 					"equals": {
 						"left": {
 							"device": {
 								"devices": [
-									"1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56"
+									"1f41a8f6-75e4-4b8e-8e4a-9bc65a14de56",
+									"63c166d7-5366-4d14-9618-651407662400"
 								],
 								"component": "main",
 								"capability": "motionSensor",
