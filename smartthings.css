@@ -2,9 +2,19 @@ div.dataTables_wrapper {
     margin-bottom: 3em;
 }
 
+/*
 table.dataTable tbody th,
 table.dataTable tbody td {
     white-space: nowrap;
+}
+ */
+
+table.dataTable tbody th {
+    white-space: nowrap;
+}
+
+table.dataTable tbody td {
+    word-break: break-word; word-break: break-all; white-space: normal;
 }
 
 .table-heading {

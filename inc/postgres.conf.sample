@@ -1,1 +1,0 @@
-host=<postgresql host> port=5432 dbname=pipeline user=postgres password=<password>
