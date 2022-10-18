@@ -53,6 +53,7 @@ function rooms_dropdown($location, $room):void {
     }
 }
 
+/*
 function display_rooms($location, $room):void {
     $items = smartthings_api('locations/'.$location.'/rooms');
     global $room_array;
@@ -67,6 +68,7 @@ function display_rooms($location, $room):void {
         $room_array[$room_name] = $item['roomId'];
     }
 }
+*/
 
 function display_devices($location, $room):void {
     global $room_array;
@@ -78,10 +80,21 @@ function display_devices($location, $room):void {
     $items = smartthings_api($uri);
 
     foreach($items as $item) {
-        echo "<tr><td>".$item['label']."</td>";
-        // echo "<td>".$item['roomId']."</td>";
+        $device_id = $item['deviceId'];
+        echo "<tr class='device_select' id='{$device_id}'><td>".$item['label']."</td>";
         echo "<td>".array_search($item['roomId'], $room_array)."</td>";
-        echo "<td>".$item['deviceId']."</td></tr>";
+        echo "<td>{$device_id}</td></tr>";
+    }
+}
+
+function capabilities_dropdown($device):void {
+    // $items = smartthings_api('/capabilities/switch/1/presentation');
+    echo 'Capabilities dropdown, device ID: ' . $device;
+    if ($device) {
+        $items = smartthings_api('/presentation?deviceId=' . $device);
+        echo "<script>alert('Presentation found');</script>";
+        // print_r($items);
+        // display_dropdown('capability', $items['detailView'], 'capability', 'capability');
     }
 }
 
@@ -101,9 +114,12 @@ function display_rules($location):void {
 
 function modes_dropdown($location):void {
     $items = smartthings_api('locations/'.$location.'/modes');
+    display_dropdown('mode', $items, 'id', 'name');
+    /*
     foreach($items as $item) {
         echo "<option value='".$item['id']."'>".$item['name']."</option>";
     }
+    */
 }
 
 /*
@@ -151,5 +167,18 @@ function display_table($json, $select_type=""):void {
     echo "</tbody>";
 }
 */
+
+/***********************************************************************************
+ * UTILITY FUNCTIONS for SMARTHINGS RULES API
+ ***********************************************************************************/
+
+function display_dropdown($control_id, $items, $id_element, $name_element, $value=NULL):void {
+    echo "<select id='{$control_id}'>";
+    foreach($items as $item) {
+        $option_id  = $item[$id_element];
+        echo "<option value='{$option_id}'".(($option_id==$value)?" selected":"").">".$item[$name_element]."</option>";
+    }
+    echo "</select>";
+}
 
 

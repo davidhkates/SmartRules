@@ -30,9 +30,11 @@
         <?php
         $location = ($_POST['location']);
         $room = ($_POST['room']);
+        $device = ($_POST['device']);
         $rule = ($_POST['rule']);
         // echo "Currently selected location ID: " . $location;
         // echo "Currently selected room ID: " . $room;
+        "Currently selected device ID: " . $device;
 
         /*
         switch ($_POST['submit_details']) {
@@ -74,10 +76,11 @@
                             <?php rooms_dropdown($location, $room); ?>
                         </select>
 
+                    <input type="text" name="device" id="device" value="<?php $device ?>" onchange="form.submit();"/>
+
                     <p><input type="submit" name="submit_details" value="Clear" title="Clear bronze and silver zone">
                         <input type="submit" name="submit_details" value="Load" title="Load data from S3 into bronze">
                         <input type="submit" name="submit_details" value="Run" title="Run SQL to populate silver and gold">
-                    <input type="hidden" id="selected_record" name="selected_record"/>
                     <!--p><input type="submit" name="lookup" value="Lookup"></p-->
 
                     <!--Drag concept for mapping here
@@ -87,19 +90,30 @@
                     <table><tr>
                         <td><h3>Devices</h3>
                             <table class='display table-heading' style='width:100%;'>
-                                <thead><tr><th>Name</th><th>Room ID</th><th>Device ID</th></tr></thead>
+                                <thead><tr><th>Name</th><th>Room</th><th>Device ID</th></tr></thead>
                                 <tbody><?php display_devices($location, $room); ?></tbody>
+                            </table>
+
+                            <table style="border:none;">
+                                <tr><td><h3>Capabilities</h3></td><td><h3>States</h3></td>
+                                    <td><h3>Actions</h3></td></tr>
+                                <tr>
+                                    <td><?php capabilities_dropdown($device) ?></td>
+                                    <td><?php //states_dropdown($device) ?></td>
+                                    <td><?php //actions_dropdown($device) ?></td>
+                                </tr>
                             </table>
                         </td>
 
-                        <td style="vertical-align:top;">
-                            <h3>Modes</h3>
-                            <select id="mode""><?php modes_dropdown($location); ?></select>
-                            <h3>Time</h3>
-                            <input type="text" placeholder="Start Time" />
-                            <input type="text" placeholder="End Time" />
-                            <h3>Constructor</h3>
-                        </td></tr>
+                            <td style="vertical-align:top;">
+                                <h3>Modes</h3><?php modes_dropdown($location); ?>
+                                <!-- select id="mode""><?php modes_dropdown($location); ?></select -->
+                                <h3>Time</h3>
+                                <input type="text" placeholder="Start Time" />
+                                <input type="text" placeholder="End Time" />
+                                <h3>Constructor</h3>
+                            </td>
+                        </tr>
                     </table>
 
                     <h3>Rules</h3>
